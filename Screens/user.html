@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Adaptive Quiz Engine</title>
+  <link rel="stylesheet" href="../css/user.css">
+
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="welcome-card">
+      <!-- Brand Section -->
+      <div class="brand">
+        <div class="brand-icon">🎯</div>
+        <h1>Welcome Back!</h1>
+        <p>Enter your details to start your learning journey</p>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-section">
+        <div class="input-group">
+          <label for="username">Your Name</label>
+          <input 
+            type="text" 
+            id="username" 
+            placeholder="Enter your name"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="error-message" id="errorMessage">
+          Please enter your name to continue
+        </div>
+
+        <button type="submit" id="submit_btn">
+          Enter Application
+        </button>
+      </div>
+
+      <!-- Features Preview -->
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon">🧠</div>
+          <div class="feature-text">Adaptive learning algorithm</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <div class="feature-text">Track your progress</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-text">Personalized quizzes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../workflow/user.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Quiz Engine</title>
+  <link rel="stylesheet" href="../css/quiz.css">
+
+</head>
+<body>
+
+  <!-- Glass Navbar -->
+  <header class="navbar">
+    <div class="logo">Adaptive Quiz</div>
+    <button id="exitQuiz" class="exit-btn">Exit</button>
+  </header>
+
+  <!-- HERO + QUIZ CARD WRAPPER -->
+  <div class="quiz-layout">
+
+    <!-- Side Info Panel (Optional but cool) -->
+    <div class="side-panel">
+      <h3>You're doing great</h3>
+      <p id="questionCounter" class="counter">Question 1 / 30</p>
+
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+
+      <div class="floating-stats">
+        <p>🔥 Adaptive Intelligence Active</p>
+        <p id="difficultyTag">Difficulty: -</p>
+      </div>
+    </div>
+
+    <!-- Quiz Main Card -->
+    <main class="quiz-card">
+      <h2 id="questionText">Loading question...</h2>
+
+      <div id="optionsContainer" class="options"></div>
+
+      <div id="feedbackBox" class="feedback hidden"></div>
+
+      <button id="nextBtn" class="next-btn" disabled>Next</button>
+    </main>
+  </div>
+
+<script type="module" src="../workflow/quiz.js"></script>
+</body>
+</html>

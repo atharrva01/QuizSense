@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Analytics | Adaptive Quiz Engine</title>
+  <link rel="stylesheet" href="../css/analytics.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="left-nav">
+      <h2>Adaptive Quiz Engine</h2>
+    </div>
+    <nav class="right-nav">
+      <a href="./home.html">Home</a>
+      <a href="./analytics.html" class="active">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Quiz Analytics</h1>
+      <p>Track your performance and identify areas for improvement</p>
+    </div>
+
+    <!-- Overall Stats -->
+    <div id="overallStatsContainer" class="stats-grid">
+      <!-- Stats will be inserted here by JS -->
+    </div>
+
+    <!-- Score Progress Chart -->
+    <div class="chart-card full-width">
+      <h2>Score Progress Over Time</h2>
+      <div class="chart-wrapper">
+        <canvas id="scoreChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Accuracy Charts -->
+    <div class="accuracy-grid">
+      <div class="chart-card">
+        <h2>Topic-wise Accuracy</h2>
+        <div class="chart-wrapper">
+          <canvas id="topicChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h2>Difficulty-wise Accuracy</h2>
+        <div class="chart-wrapper">
+          <canvas id="difficultyChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz History Table -->
+    <div class="table-section">
+      <h2>Quiz History</h2>
+      <table class="quiz-table" id="quizTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Quiz ID</th>
+            <th>Score</th>
+            <th>Accuracy</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../workflow/analytics.js"></script>
+</body>
+</html>

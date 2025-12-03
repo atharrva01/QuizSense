@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Adaptive Quiz Engine</title>
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+  <!-- APP SHELL -->
+  <div class="app-shell">
+    
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="left-nav">
+        <div class="logo">Adaptive Quiz Engine</div>
+        <nav>
+          <a href="./home.html">Dashboard</a>
+          <a href="./analytics.html">Analytics</a>
+        </nav>
+      </div>
+
+      <div class="right-nav">
+        <img src="../assets/profile.jpg" alt="profile" class="profile-icon" />
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="page-main">
+      <div class="container">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <h1 id="hero-title">
+              Welcome back, <span id="usernameDisplay">User</span>
+            </h1>
+            <p>
+              Track your progress and challenge yourself with adaptive quizzes
+              tailored to your learning pace.
+            </p>
+            <div class="hero-actions">
+              <button id="startQuizBtn" class="btn-primary">Start New Quiz</button>
+              <button id="viewAnalyticsBtn" class="btn-secondary">View Analytics</button>
+            </div>
+          </div>
+
+          <aside class="hero-stats" aria-label="Quick overview">
+            <div class="quick-stat">
+              <h3 id="totalAttempted">0</h3>
+              <p>Quizzes Completed</p>
+            </div>
+            <div class="quick-stat">
+              <h3 id="averageScore">0%</h3>
+              <p>Average Score</p>
+            </div>
+            <div class="quick-stat">
+              <h3 id="improvement">0%</h3>
+              <p>Improvement Rate</p>
+            </div>
+          </aside>
+        </section>
+
+        <!-- TOP STATS ROW -->
+        <section class="stats-dashboard" aria-label="Key statistics">
+          <article class="stat-card">
+            <div class="stat-icon">📊</div>
+            <h2 id="totalAttemptsDash">0</h2>
+            <p>Total Attempts</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <h2 id="averageScoreDash">0%</h2>
+            <p>Average Score</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon">✅</div>
+            <h2 id="completionRateDash">0%</h2>
+            <p>Completion Rate</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon">📈</div>
+            <h2 id="improvementDash">0%</h2>
+            <p>Improvement</p>
+          </article>
+        </section>
+
+        <!-- MAIN GRID: CHART + SIDEBAR -->
+        <section class="content-grid" aria-label="Recent activity and charts">
+          
+          <!-- CHART -->
+          <section class="chart-section">
+            <div class="chart-header">
+              <h3>Quiz Completion (Last 7 Days)</h3>
+              <select class="chart-filter" id="chartFilter">
+                <option value="7">Last 7 Days</option>
+              </select>
+            </div>
+            <div class="chart-container">
+              <canvas id="weekChart"></canvas>
+            </div>
+          </section>
+
+          <!-- SIDEBAR -->
+          <aside class="sidebar" aria-label="Resume and recent activity">
+            <section class="recent-quiz-card">
+              <h3>Resume Quiz</h3>
+              <p>Continue where you left off or start fresh!</p>
+              <button id="continueQuizBtn" class="btn-primary continue-quiz-btn">
+                Start Quiz
+              </button>
+            </section>
+
+            <section class="activity-card">
+              <h3>Recent Activity</h3>
+              <div id="recentQuizBox" class="recent-box"></div>
+            </section>
+          </aside>
+        </section>
+
+        <!-- ANALYTICS CALL TO ACTION -->
+        <section class="analytics-cta" aria-label="View detailed analytics">
+          <h3>Dive Deeper Into Your Performance</h3>
+          <p>
+            Get detailed insights, track your learning journey, and identify
+            areas for improvement.
+          </p>
+          <button id="fullAnalyticsBtn" class="full-analytics-btn">
+            View Complete Analytics
+          </button>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../workflow/home.js"></script>
+</body>
+</html>
