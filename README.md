@@ -92,6 +92,13 @@ https://atharrva01.github.io/QuizSense/
 
 ---
 
+## LightHouse Performance Check
+
+<img width="1674" height="590" alt="image" src="https://github.com/user-attachments/assets/74f3c65b-3e7c-458f-a732-4e8651d81aee" />
+<img width="1645" height="619" alt="image" src="https://github.com/user-attachments/assets/9da39fd7-68e7-4d93-b06e-c3e833d5128a" />
+
+
+
 ## 📄 License
 
 This project is for academic and research purposes.
